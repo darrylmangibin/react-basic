@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Actions = () => {
+const Actions = (props) => {
   return (
-    <button 
+    <button
+      onClick={props.handleSelectedOption} 
       className="button--big"
+      disabled={!props.hasOptions}
     >
       What should I do?
     </button>

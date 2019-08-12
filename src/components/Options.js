@@ -12,9 +12,14 @@ const Options = (props) => {
     )
   } else {
     renderOptions = (
-      props.options.map((option) => {
+      props.options.map((option, i) => {
         return (
-          <Option />
+          <Option 
+            key={option.id}
+            option={option}
+            index={i + 1}
+            handleRemoveSelected={props.handleRemoveSelected}
+          />
         )
       })
     )
@@ -25,6 +30,7 @@ const Options = (props) => {
         <h3 className="widget__header--title">Your options</h3>
         <button 
           className="button button--link"
+          onClick={props.handleRemoveAll}
         >
           Remove all
         </button>

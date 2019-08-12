@@ -34,13 +34,16 @@ const Modal = (props) => {
       marginBottom: '1.2rem'
     }
   }
-
+  console.log(props)
   return (
     <div style={styles.container}>
       <div style={styles.flex}>
         <div style={styles.flexItem}>
-          <h3 style={styles.mb}>TITLE</h3>
-          <button className="button">Close</button>
+          {props.selected && <h3 style={styles.mb}>{props.selected.text}</h3>}
+          <button 
+            onClick={props.handleCloseModal}
+            className="button"
+          >Close</button>
         </div>
       </div>
     </div>
