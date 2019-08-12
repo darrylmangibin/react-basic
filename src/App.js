@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 
 import Header from './components/Header';
 import Actions from './components/Actions';
@@ -8,6 +9,23 @@ import Widget from './components/common/Widget';
 import AddOption from './components/AddOption';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleDeleteAll = this.handleDeleteAll.bind(this);
+    this.state = {
+      options: [
+        { id: uuid(), text: 'Darryl' },
+        { id: uuid(), text: 'Sarah' }
+      ]
+    }
+  }
+
+  handleDeleteAll() {
+    this.setState({
+      options: []
+    })
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -15,7 +33,10 @@ class App extends React.Component {
         <Container>
           <Actions />
           <Widget>
-            <Options />
+            <Options 
+              options={this.state.options}
+              handleDeleteAll={this.handleDeleteAll}
+            />
             <AddOption />
           </Widget>
         </Container>
