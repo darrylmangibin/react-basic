@@ -2,7 +2,9 @@ import React from 'react';
 
 const Actions = () => {
   return (
-    <button className="button--big">
+    <button 
+      className="button--big"
+    >
       What should I do?
     </button>
   )
