@@ -1,0 +1,15 @@
+.add-option {
+  display: flex;
+  flex-direction: row;
+  padding: 1.6rem;
+
+  &__input {
+    flex-grow: 1;
+    background: #333745;
+    border: none;
+    border-bottom: 0.3rem solid #1d2028;
+    margin: 0 1.2rem 0 0;
+    color: #a5afd7;
+    padding: 1.2rem;
+  }
+}

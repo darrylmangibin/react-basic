@@ -1,0 +1,36 @@
+.button {
+  background-color: #8357c5;
+  border: none;
+  border-bottom: 0.3rem solid #693cad;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.2rem;
+  cursor: pointer;
+
+  &--link {
+    background: none;
+    border: none;
+    color: #a5afd7;
+    padding: 0;
+  }
+
+  &--big {
+    background-color: #8357c5;
+    border: none;
+    border-bottom: 0.6rem solid #693cad;
+    color: #fff;
+    font-weight: bold;
+    font-size: 3.2rem;
+    width: 100%;
+    margin-bottom: 4.8rem;
+    padding: 2.4rem;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
